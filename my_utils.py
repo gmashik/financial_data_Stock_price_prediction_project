@@ -24,10 +24,11 @@ def configure_plotly_browser_state():
   
 def test_mod():
 	print("Successfully imported")
-def plot_series(time, series, format="-", start=0, end=None):
-    plt.plot(time[start:end], series[start:end], format)
+def plot_series(time, series, format="-", start=0, end=None,label):
+    plt.plot(time[start:end], series[start:end], format,label=label)
     plt.xlabel("Time")
     plt.ylabel("Value")
+    plt.legend()
     plt.grid(True)
 def windowed_dataset(series, window_size, batch_size, shuffle_buffer):
     series = tf.expand_dims(series, axis=-1)
