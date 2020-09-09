@@ -24,8 +24,8 @@ def configure_plotly_browser_state():
   
 def test_mod():
 	print("Successfully imported")
-def plot_series(time, series, format="-", start=0, end=None,label):
-    plt.plot(time[start:end], series[start:end], format,label=" ")
+def plot_series(time, series, format="-", start=0, end=None,label=""):
+    plt.plot(time[start:end], series[start:end], format,label=label)
     plt.xlabel("Time")
     plt.ylabel("Value")
     plt.legend()
